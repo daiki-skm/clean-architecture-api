@@ -1,11 +1,12 @@
 package infrastructure
 
 import (
-	"cloud.google.com/go/firestore"
 	"context"
+	"log"
+
+	"cloud.google.com/go/firestore"
 	firebase "firebase.google.com/go"
 	"google.golang.org/api/option"
-	"log"
 )
 
 func FirebaseInit(ctx context.Context) (*firestore.Client, error) {

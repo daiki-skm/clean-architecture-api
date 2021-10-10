@@ -5,5 +5,3 @@ type User struct {
 	Age     string `json:"age"`
 	Address string `json:"address"`
 }
-
-type Users []User

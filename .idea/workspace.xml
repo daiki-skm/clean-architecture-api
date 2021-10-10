@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="cae43f93-b676-4d05-8046-04b38f4f3a5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example.go" beforeDir="false" afterPath="$PROJECT_DIR$/example.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/application/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/application/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/message.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/response.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/firebase.go" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/firebase.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/controllers/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/interface/controllers/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/presenters/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/interface/presenters/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/repositories/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/interface/repositories/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usecase/user_input.go" beforeDir="false" afterPath="$PROJECT_DIR$/usecase/user_input.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usecase/user_interactor.go" beforeDir="false" afterPath="$PROJECT_DIR$/usecase/user_interactor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usecase/user_output.go" beforeDir="false" afterPath="$PROJECT_DIR$/usecase/user_output.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

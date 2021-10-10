@@ -3,30 +3,32 @@ package repositories
 import (
 	"context"
 	"encoding/json"
+	"log"
+
 	"example/domain"
 	"example/infrastructure"
+
 	"github.com/labstack/echo"
-	"log"
 )
 
-type UserRepository interface {
-	GetUser(ec echo.Context, user *domain.User) ([]*domain.User, error)
+type UsersRepository interface {
+	AddUsers(ec echo.Context, user *domain.User) ([]*domain.User, error)
 }
 
-type UserRepositoryAdapter struct {
+type UsersRepositoryAdapter struct {
 	echo *echo.Echo
-	userRepo UserRepository
+	userRepository UsersRepository
 }
 
-func NewUserRepositoryAdapter(
+func NewUsersRepositoryAdapter(
 	echo *echo.Echo,
-) *UserRepositoryAdapter {
-	return &UserRepositoryAdapter{
+) *UsersRepositoryAdapter {
+	return &UsersRepositoryAdapter{
 		echo: echo,
 	}
 }
 
-func (r *UserRepositoryAdapter) GetUser(ec echo.Context, user *domain.User) ([]*domain.User, error) {
+func (r *UsersRepositoryAdapter) AddUsers(ec echo.Context, user *domain.User) ([]*domain.User, error) {
 	ctx := context.Background()
 	client, err := infrastructure.FirebaseInit(ctx)
 	if err != nil {
@@ -79,26 +81,3 @@ func mapToStruct(m map[string]interface{}, val interface{}) error {
 	}
 	return nil
 }
-
-//func DataAdd(name string, age string, address string) error {
-//	ctx := context.Background()
-//	client, err := infrastructure.FirebaseInit(ctx)
-//	if err != nil {
-//		log.Fatal(err)
-//	}
-//
-//	// データ追加
-//	_, err = client.Collection("users").Doc(name).Set(ctx, map[string]interface{}{
-//		"age":     age,
-//		"address": address,
-//	})
-//	if err != nil {
-//		log.Fatalf("Failed adding alovelace: %v", err)
-//	}
-//
-//	// 切断
-//	defer client.Close()
-//
-//	// エラーなしは成功
-//	return err
-//}

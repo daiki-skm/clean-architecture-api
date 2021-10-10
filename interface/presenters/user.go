@@ -1,23 +1,25 @@
 package presenters
 
 import (
+	"net/http"
+
 	"example/domain"
 	"example/usecase"
+
 	"github.com/labstack/echo"
-	"net/http"
 )
 
-type UserPresenters struct {
+type UsersPresenters struct {
 	echo *echo.Echo
-	usecase.UserOutput
+	usecase.UsersOutputPort
 }
 
-func NewUserPresenters(echo *echo.Echo) *UserPresenters {
-	return &UserPresenters{
+func NewUsersPresenters(echo *echo.Echo) *UsersPresenters {
+	return &UsersPresenters{
 		echo: echo,
 	}
 }
 
-func (p *UserPresenters) GetUser(ec echo.Context, user []*domain.User) error {
+func (p *UsersPresenters) AddUsers(ec echo.Context, user []*domain.User) error {
 	return ec.JSON(http.StatusOK, user)
 }
