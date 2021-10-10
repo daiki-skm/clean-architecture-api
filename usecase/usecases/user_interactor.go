@@ -30,7 +30,7 @@ func (i *UsersInteractor) AddUsers(ec echo.Context) error {
 		return err
 	}
 
-	res, err := i.UsersService.AddUsers(ec, u)
+	res, err := i.UsersService.AddUsers(u)
 	if err != nil {
 		log.Fatal(err)
 	}

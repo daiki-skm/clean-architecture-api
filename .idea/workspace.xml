@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cae43f93-b676-4d05-8046-04b38f4f3a5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/controllers/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/interface/controllers/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/presenters/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/interface/presenters/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/repositories/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/interface/repositories/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usecase/user_input_port.go" beforeDir="false" afterPath="$PROJECT_DIR$/usecase/usecases/user_input_port.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usecase/user_interactor.go" beforeDir="false" afterPath="$PROJECT_DIR$/usecase/usecases/user_interactor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usecase/user_output_port.go" beforeDir="false" afterPath="$PROJECT_DIR$/usecase/usecases/user_output_port.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usecase/services/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/usecase/services/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usecase/usecases/user_interactor.go" beforeDir="false" afterPath="$PROJECT_DIR$/usecase/usecases/user_interactor.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

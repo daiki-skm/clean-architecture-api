@@ -25,7 +25,7 @@ func NewUsersRepository(
 	}
 }
 
-func (r *UsersRepository) AddUsers(ec echo.Context, user *domain.User) ([]*domain.User, error) {
+func (r *UsersRepository) AddUsers(user *domain.User) ([]*domain.User, error) {
 	ctx := context.Background()
 	client, err := infrastructure.FirebaseInit(ctx)
 	if err != nil {
