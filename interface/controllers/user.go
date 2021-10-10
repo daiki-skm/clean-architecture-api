@@ -3,20 +3,20 @@ package controllers
 import (
 	"example/interface/presenters"
 	"example/interface/repositories"
-	"example/usecase"
+	"example/usecase/usecases"
 
 	"github.com/labstack/echo"
 )
 
 type UsersController struct {
-	UsersInputPort usecase.UsersInputPort
+	UsersInputPort usecases.UsersInputPort
 }
 
 func NewUsersController(e *echo.Echo) *UsersController {
 	return &UsersController{
-		UsersInputPort: usecase.NewUsersInteractor(
+		UsersInputPort: usecases.NewUsersInteractor(
 			presenters.NewUsersPresenters(e),
-			repositories.NewUsersRepositoryAdapter(e),
+			repositories.NewUsersRepository(e),
 		),
 	}
 }

@@ -1,26 +1,26 @@
-package usecase
+package usecases
 
 import (
 	"log"
 
 	"example/domain"
-	"example/interface/repositories"
+	"example/usecase/services"
 
 	"github.com/labstack/echo"
 )
 
 type UsersInteractor struct {
 	UsersOutputPort UsersOutputPort
-	UsersRepository repositories.UsersRepository
+	UsersService services.UsersService
 }
 
 func NewUsersInteractor(
 	usersOutputPort UsersOutputPort,
-	usersRepository repositories.UsersRepository,
+	usersService services.UsersService,
 ) *UsersInteractor {
 	return &UsersInteractor{
 		UsersOutputPort: usersOutputPort,
-		UsersRepository: usersRepository,
+		UsersService: usersService,
 	}
 }
 
@@ -30,7 +30,7 @@ func (i *UsersInteractor) AddUsers(ec echo.Context) error {
 		return err
 	}
 
-	res, err := i.UsersRepository.AddUsers(ec, u)
+	res, err := i.UsersService.AddUsers(ec, u)
 	if err != nil {
 		log.Fatal(err)
 	}

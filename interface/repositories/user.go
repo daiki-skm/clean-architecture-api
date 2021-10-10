@@ -7,28 +7,25 @@ import (
 
 	"example/domain"
 	"example/infrastructure"
+	"example/usecase/services"
 
 	"github.com/labstack/echo"
 )
 
-type UsersRepository interface {
-	AddUsers(ec echo.Context, user *domain.User) ([]*domain.User, error)
-}
-
-type UsersRepositoryAdapter struct {
+type UsersRepository struct {
 	echo *echo.Echo
-	userRepository UsersRepository
+	usersService services.UsersService
 }
 
-func NewUsersRepositoryAdapter(
+func NewUsersRepository(
 	echo *echo.Echo,
-) *UsersRepositoryAdapter {
-	return &UsersRepositoryAdapter{
+) *UsersRepository {
+	return &UsersRepository{
 		echo: echo,
 	}
 }
 
-func (r *UsersRepositoryAdapter) AddUsers(ec echo.Context, user *domain.User) ([]*domain.User, error) {
+func (r *UsersRepository) AddUsers(ec echo.Context, user *domain.User) ([]*domain.User, error) {
 	ctx := context.Background()
 	client, err := infrastructure.FirebaseInit(ctx)
 	if err != nil {

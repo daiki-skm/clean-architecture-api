@@ -4,14 +4,14 @@ import (
 	"net/http"
 
 	"example/domain"
-	"example/usecase"
+	"example/usecase/usecases"
 
 	"github.com/labstack/echo"
 )
 
 type UsersPresenters struct {
 	echo *echo.Echo
-	usecase.UsersOutputPort
+	usecases.UsersOutputPort
 }
 
 func NewUsersPresenters(echo *echo.Echo) *UsersPresenters {
