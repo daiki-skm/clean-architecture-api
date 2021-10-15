@@ -9,6 +9,8 @@ This project has 4 layer :
 - Usecase Layer (Application Business Rules)
 - Domain Layer (Enterprise Business Rules)
 
+If you want to more understand, please refer to [here](https://zenn.dev/articles/6ff48a9dc4f645/edit)!
+
 ## Run the Applications
 This projects used a firestore. You must set the firestore.
 The following [Golang入門 Firestore導入篇](https://rightcode.co.jp/blog/information-technology/golang-introduction-firestore)
