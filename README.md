@@ -9,7 +9,7 @@ This project has 4 layer :
 - Usecase Layer (Application Business Rules)
 - Domain Layer (Enterprise Business Rules)
 
-If you want to more understand, please refer to [here](https://zenn.dev/articles/6ff48a9dc4f645/edit)!
+If you want to more understand, please refer to [here](https://zenn.dev/daiki_skm/articles/6ff48a9dc4f645)!
 
 ## Run the Applications
 This projects used a firestore. You must set the firestore.
